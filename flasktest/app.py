@@ -24,11 +24,11 @@ def imageinput():
         way = str(request.form["how"])
         if 'file' not in request.files:
             flash('No file part')
-            return redirect()
+            return redirect("/image")
         file = request.files['file']
         if file.filename == '':
             flash('No selected file')
-            return redirect()
+            return redirect("/image")
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
