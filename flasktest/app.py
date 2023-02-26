@@ -47,7 +47,7 @@ def imageinput():
 def imageprocess(how):
     imgfile = session["path"]
     flash("Just a moment!")
-    para = 3
+    para = 5
     imgarr = image2arr(imgfile)
     if how == "Image Optimization":
         after = enhance(imgarr)
@@ -61,7 +61,7 @@ def imageprocess(how):
         after = edge(imgarr)
     arr2image(app.config['UPLOAD_FOLDER'] + "/after.jpg", after)
     imgfile = os.path.join(app.config['UPLOAD_FOLDER'], "after.jpg")
-    return render_template("image.html", image = "../" + imgfile)
+    return render_template("out.html", image = "../" + imgfile)
 
 @app.route("/team")
 def team():
