@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <p>This is the signal processing site</p>
+    <form action='#' method="post" enctype="multipart/form-data">
+        <p>How do you want to process your file?</p>
+        <select class="form-select", name="how">
+            <optgroup label="This is a group">
+                <option value="denoising" selected="">Image denoising</option>
+                <option value="compression">Image compression</option>
+                <option value="optimizing">Image optimizing</option>
+            </optgroup>
+        </select>
+        <p>Put in your file!</p>
+        <input class="form-control" type="file" name="file">
+        <input class="btn btn-primary" type="submit" style="margin-left: 10;font-size: 17px;">
+    </form>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
